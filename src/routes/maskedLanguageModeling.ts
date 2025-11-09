@@ -15,7 +15,7 @@ router.post("/", async (req: Request, res: Response) => {
       return res.status(400).json({ error: "Missing required field: text" });
     }
 
-    const pipe = await pipelineFactory.getPipeline("masked-language-modeling");
+    const pipe = await pipelineFactory.getPipeline("fill-mask");
     const result = await pipe(text, { topk: topk ?? 5 });
 
     const response: PipelineResult = {

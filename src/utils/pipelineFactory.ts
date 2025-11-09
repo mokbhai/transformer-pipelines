@@ -1,5 +1,5 @@
-import { pipeline } from "@huggingface/transformers";
-
+// import { pipeline } from "@huggingface/transformers";
+import { pipeline } from "@xenova/transformers";
 class PipelineFactory {
   private pipelines: Map<string, any> = new Map();
   private isInitializing: Map<string, Promise<any>> = new Map();

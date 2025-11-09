@@ -14,7 +14,7 @@ router.post("/", async (req: Request, res: Response) => {
 
     const pipe = await pipelineFactory.getPipeline(
       "text-generation",
-      "Salesforce/codegen-350M-mono"
+      "Xenova/codegen-350M-mono"
     );
     const result = await pipe(text, generation);
 
